@@ -1,3 +1,13 @@
+// Dark mode
+const root = document.documentElement;
+const darkToggle = document.getElementById('darkToggle');
+if (localStorage.getItem('theme') === 'dark') root.setAttribute('data-theme', 'dark');
+darkToggle.addEventListener('click', () => {
+  const isDark = root.getAttribute('data-theme') === 'dark';
+  root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  localStorage.setItem('theme', isDark ? 'light' : 'dark');
+});
+
 // Nav scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
@@ -54,19 +64,6 @@ document.querySelectorAll(
   obs.observe(el);
 });
 document.querySelectorAll('.stats').forEach(el => obs.observe(el));
-
-// Form
-document.getElementById('ctaForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
-  const orig = btn.textContent;
-  btn.textContent = 'Sending...'; btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = 'Sent! We\u2019ll WhatsApp you within 24 hours.';
-    btn.style.background = '#059669'; btn.style.borderColor = '#059669';
-    setTimeout(() => { btn.textContent = orig; btn.disabled = false; btn.style.background = ''; btn.style.borderColor = ''; e.target.reset(); }, 3000);
-  }, 1000);
-});
 
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
