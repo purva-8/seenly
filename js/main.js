@@ -56,8 +56,8 @@ const obs = new IntersectionObserver(entries => {
 }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
 document.querySelectorAll(
-  '.niche-card, .why-card, .pricing-card, .step-card, .portfolio-card, ' +
-  '.story-card, .faq-item, .stat, .section-header, .feature-card'
+  '.niche-card, .pricing-card, .faq-item, .stat, .section-header, ' +
+  '.wb-card, .addon-card, .step-flow-item, .compare-table-wrap'
 ).forEach((el, i) => {
   el.classList.add('fade-in');
   el.style.transitionDelay = `${(i % 4) * 0.06}s`;
