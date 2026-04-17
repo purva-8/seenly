@@ -2,13 +2,6 @@
 
 Done-for-you web design studio. AI-built in days or custom-coded from scratch.
 
-## Stack
-
-- Plain HTML / CSS / JS — no framework, no build step
-- Google Fonts: Inter, Plus Jakarta Sans, Caveat
-- Calendly popup widget for bookings
-- Dark mode via `localStorage` + `data-theme` on `<html>`
-
 ## Structure
 
 ```
@@ -33,20 +26,6 @@ seenly/
 | FAQ | `#faq` |
 | CTA / Contact | `#contact` |
 
-## Pricing
-
-| Plan | Build mode | Price |
-|---|---|---|
-| Starter | AI-built | $599 one-time |
-| Pro | Coded from scratch | $1,499 one-time |
-| Enterprise | Bespoke | Custom |
-
-Add-ons: Growth Bundle ($499) · Monthly Retainer ($149/mo)
-
-## Calendly
-
-All CTAs point to `https://calendly.com/purvahk08/15mins` via the Calendly popup widget.
-
 ## Brand colours
 
 | Token | Value |
@@ -55,7 +34,3 @@ All CTAs point to `https://calendly.com/purvahk08/15mins` via the Calendly popup
 | `--teal-light` | `#14918E` |
 | `--teal-bg` | `#E8F6F5` |
 | `--dark` | `#111827` |
-
-## Dev
-
-Open `index.html` directly in a browser — no server required.
