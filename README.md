@@ -1,4 +1,4 @@
-# Seenly — Landing Page
+# Seenly - Landing Page
 
 Done-for-you web design studio. AI-built in days or custom-coded from scratch.
 
