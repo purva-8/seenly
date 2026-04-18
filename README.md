@@ -26,11 +26,4 @@ seenly/
 | FAQ | `#faq` |
 | CTA / Contact | `#contact` |
 
-## Brand colours
 
-| Token | Value |
-|---|---|
-| `--teal` | `#0D6E6E` |
-| `--teal-light` | `#14918E` |
-| `--teal-bg` | `#E8F6F5` |
-| `--dark` | `#111827` |
