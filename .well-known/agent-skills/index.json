@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agentskills.io/schema/v0.2.0/index.json",
+  "skills": [
+    {
+      "name": "book-consultation",
+      "type": "action",
+      "description": "Book a free 15-minute consultation call with Seenly to discuss your web project.",
+      "url": "https://seenly.studio/.well-known/agent-skills/book-consultation.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "view-pricing",
+      "type": "info",
+      "description": "View Seenly's web design packages and pricing plans.",
+      "url": "https://seenly.studio/.well-known/agent-skills/view-pricing.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}
