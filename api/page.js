@@ -9,7 +9,7 @@ module.exports = (req, res) => {
     res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
     res.send(md);
   } else {
-    const html = fs.readFileSync(path.join(process.cwd(), '_index.html'), 'utf-8');
+    const html = fs.readFileSync(path.join(process.cwd(), 'index.html'), 'utf-8');
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.send(html);
   }
