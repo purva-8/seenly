@@ -1,0 +1,10 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://seenly.studio/",
+      "https://www.iana.org/assignments/link-relations/service-doc": [
+        { "href": "https://seenly.studio/" }
+      ]
+    }
+  ]
+}
