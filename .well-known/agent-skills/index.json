@@ -6,7 +6,7 @@
       "type": "action",
       "description": "Book a free 15-minute consultation call with Seenly to discuss your web project.",
       "url": "https://seenly.studio/.well-known/agent-skills/book-consultation.md",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "sha256": "<REPLACE_WITH_ACTUAL_SHA256_OF_.well-known/agent-skills/book-consultation.md>"
     },
     {
       "name": "view-pricing",
