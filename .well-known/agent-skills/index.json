@@ -6,14 +6,14 @@
       "type": "action",
       "description": "Book a free 15-minute consultation call with Seenly to discuss your web project.",
       "url": "https://seenly.studio/.well-known/agent-skills/book-consultation.md",
-      "sha256": "<REPLACE_WITH_ACTUAL_SHA256_OF_.well-known/agent-skills/book-consultation.md>"
+      "sha256": "5d60ba63210a3b61917398bcfee88bbcf098e9abf906878f4f6f7998b7685546"
     },
     {
       "name": "view-pricing",
       "type": "info",
       "description": "View Seenly's web design packages and pricing plans.",
       "url": "https://seenly.studio/.well-known/agent-skills/view-pricing.md",
-      "sha256": "<replace-with-the-actual-sha256-of-.well-known/agent-skills/view-pricing.md>"
+      "sha256": "4e8292566b047bf668a2d37b202cd9b291c02051ab998a9771279112018aea86"
     }
   ]
 }

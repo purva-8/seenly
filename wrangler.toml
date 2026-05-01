@@ -1,0 +1,7 @@
+name = "seenly-studio"
+main = "worker.js"
+compatibility_date = "2025-05-01"
+
+[site]
+bucket = "."
+exclude = ["worker.js", "wrangler.toml", "README.md", ".git"]
