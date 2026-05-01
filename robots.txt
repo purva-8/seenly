@@ -7,8 +7,6 @@ Content-Signal: ai-train=no, search=yes, ai-input=no
 # Default: allow all well-behaved crawlers
 User-agent: *
 Allow: /
-Disallow: /css/
-Disallow: /js/
 
 # AI search / retrieval — welcome
 User-agent: GPTBot
