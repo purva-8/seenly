@@ -13,7 +13,7 @@
       "type": "info",
       "description": "View Seenly's web design packages and pricing plans.",
       "url": "https://seenly.studio/.well-known/agent-skills/view-pricing.md",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "sha256": "<replace-with-the-actual-sha256-of-.well-known/agent-skills/view-pricing.md>"
     }
   ]
 }
