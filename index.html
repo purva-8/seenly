@@ -563,5 +563,42 @@
       }
     }
   </script>
+
+  <!-- WebMCP: expose site actions to AI agents (https://webmachinelearning.github.io/webmcp/) -->
+  <script>
+    if (navigator.modelContext) {
+      navigator.modelContext.provideContext({
+        tools: [
+          {
+            name: 'book_consultation',
+            description: 'Open the Seenly booking page so the user can schedule a free 15-minute consultation call.',
+            inputSchema: { type: 'object', properties: {}, required: [] },
+            execute: async () => {
+              Calendly.initPopupWidget({ url: 'https://calendly.com/purvahk08/15mins' });
+              return { success: true };
+            }
+          },
+          {
+            name: 'open_contact_form',
+            description: 'Open the Seenly contact form so the user can send a project inquiry.',
+            inputSchema: { type: 'object', properties: {}, required: [] },
+            execute: async () => {
+              openContactForm();
+              return { success: true };
+            }
+          },
+          {
+            name: 'scroll_to_pricing',
+            description: 'Scroll the page to the pricing / packages section.',
+            inputSchema: { type: 'object', properties: {}, required: [] },
+            execute: async () => {
+              document.getElementById('packages').scrollIntoView({ behavior: 'smooth' });
+              return { success: true };
+            }
+          }
+        ]
+      });
+    }
+  </script>
 </body>
 </html>

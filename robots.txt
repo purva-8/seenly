@@ -1,0 +1,31 @@
+# robots.txt for seenly.studio
+# https://www.rfc-editor.org/rfc/rfc9309
+
+# Content preferences (https://contentsignals.org/)
+Content-Signal: ai-train=no, search=yes, ai-input=no
+
+# Default: allow all well-behaved crawlers
+User-agent: *
+Allow: /
+
+# AI search / retrieval — welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# Sitemap
+Sitemap: https://seenly.studio/sitemap.xml

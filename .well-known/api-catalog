@@ -1,0 +1,10 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://seenly.studio/",
+      "service-doc": [
+        { "href": "https://seenly.studio/" }
+      ]
+    }
+  ]
+}
