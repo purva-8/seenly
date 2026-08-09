@@ -30,9 +30,18 @@
     <main class="sc-stage">
 
       <section class="sc-hero">
-        <h1>We make AI companies impossible to ignore.</h1>
-        <p class="sc-tag">Product &middot; growth &middot; distribution</p>
-        <p class="sc-arc">0 &rarr; 1. &nbsp;1 &rarr; 100.</p>
+        <div class="sc-hero-copy">
+          <h1>We make AI companies impossible to ignore.</h1>
+          <p class="sc-tag">Product &middot; growth &middot; distribution</p>
+        </div>
+        <div class="sc-odo">
+          <span class="odo-line" aria-hidden="true">
+            <span class="odo-group" data-side="l"></span>
+            <span class="odo-arrow">&rarr;</span>
+            <span class="odo-group" data-side="r"></span>
+          </span>
+          <span class="sc-sr">0 to 1. 1 to 100.</span>
+        </div>
       </section>
 
       <section class="sc-do" aria-label="What we do">
@@ -72,7 +81,7 @@
       </div>
       <div class="sc-actions">
         <a href="#" onclick="openContactForm();return false;" class="sc-alt">Work with us</a>
-        <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/purvahk08/15mins'});return false;" class="sc-cta">Book a call <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/purvahk08/quick-chat'});return false;" class="sc-cta">Book a call <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </footer>
 
@@ -234,7 +243,7 @@
             description: 'Open the Seenly booking page so the user can schedule a free 15-minute intro call.',
             inputSchema: { type: 'object', properties: {}, required: [] },
             execute: async () => {
-              Calendly.initPopupWidget({ url: 'https://calendly.com/purvahk08/15mins' });
+              Calendly.initPopupWidget({ url: 'https://calendly.com/purvahk08/quick-chat' });
               return { success: true };
             }
           },
