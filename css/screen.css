@@ -19,7 +19,7 @@ body.one-screen {
   height: 100dvh;
   max-width: 1080px;
   margin: 0 auto;
-  padding: clamp(14px, 2.4vh, 26px) clamp(20px, 4vw, 44px) clamp(12px, 2vh, 20px);
+  padding: clamp(20px, 3.4vh, 40px) clamp(20px, 4vw, 44px) clamp(26px, 4.6vh, 54px);
   display: flex;
   flex-direction: column;
   gap: clamp(12px, 2.2vh, 26px);
@@ -53,6 +53,58 @@ body.one-screen {
 }
 
 /* ---------- hero ---------- */
+.sc-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: clamp(18px, 3vw, 52px);
+}
+.sc-hero-copy { min-width: 0; }
+
+/* ---------- flip counter ---------- */
+.sc-odo {
+  justify-self: end;
+  padding-top: clamp(2px, .8vh, 10px);
+}
+.odo-line {
+  display: inline-flex;
+  align-items: center;
+  gap: .26em;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.35rem, 3.3vw, 2.6rem);
+  line-height: 1;
+  letter-spacing: -.02em;
+  color: var(--teal);
+  font-variant-numeric: tabular-nums;
+}
+.odo-group { display: inline-flex; }
+.odo-arrow { opacity: .55; }
+.reel {
+  display: block;
+  width: .62em;
+  height: 1em;
+  overflow: hidden;
+}
+.reel .strip {
+  display: block;
+  will-change: transform;
+}
+.reel b {
+  display: block;
+  height: 1em;
+  line-height: 1;
+  font-weight: 800;
+  text-align: center;
+}
+.sc-sr {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .sc-hero h1 {
   font-family: var(--font-display);
   font-weight: 800;
@@ -243,7 +295,11 @@ body.one-screen {
   font-size: clamp(.75rem, 1.15vw, .86rem);
   line-height: 1.55;
   color: var(--text-light);
-  max-width: 68ch;
+}
+/* keep the playbook line on a single row where there is width for it */
+.sc-row .sc-fine { white-space: nowrap; }
+@media (max-width: 980px) {
+  .sc-row .sc-fine { white-space: normal; }
 }
 
 /* ---------- bottom CTA ---------- */
@@ -254,7 +310,8 @@ body.one-screen {
   justify-content: space-between;
   gap: clamp(14px, 2.5vw, 28px);
   flex-wrap: wrap;
-  padding-top: clamp(12px, 2vh, 20px);
+  margin-top: clamp(8px, 1.6vh, 18px);
+  padding-top: clamp(16px, 2.8vh, 28px);
   border-top: 1.5px solid var(--border);
 }
 .sc-ask-q {
@@ -334,7 +391,9 @@ body.one-screen {
   .sc-do-card .sc-k { margin-bottom: 0; }
   .sc-do-card p { flex-basis: 100%; }
   .sc-row { grid-template-columns: 1fr; gap: 3px; align-items: start; }
+  .sc-hero { grid-template-columns: 1fr; gap: 10px; }
   .sc-hero h1 { max-width: 100%; }
+  .sc-odo { justify-self: start; padding-top: 0; }
   .sc-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
   .sc-actions { width: 100%; }
 }
@@ -350,4 +409,5 @@ body.one-screen {
   .sc-do-card, .sc-cta, .sc-cta svg, .sc-alt { transition: none; }
   .sc-cta:hover { transform: none; }
   .cube, .rings, .bars { animation: none; }
+  .reel .strip { transition: none !important; }
 }
