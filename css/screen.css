@@ -1,0 +1,256 @@
+/* ==========================================================================
+   One-screen layout. Everything fits the viewport, no page scroll.
+   Overrides the long-page styles in style.css.
+   ========================================================================== */
+
+html, body.one-screen { height: 100%; }
+
+body.one-screen {
+  margin: 0;
+  overflow: hidden;
+  font-family: var(--font);
+  color: var(--text);
+  background:
+    radial-gradient(900px 460px at 88% -8%, var(--teal-bg) 0%, transparent 62%),
+    var(--bg);
+}
+
+.screen {
+  height: 100dvh;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: clamp(14px, 2.4vh, 26px) clamp(20px, 4vw, 44px) clamp(12px, 2vh, 20px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 2.2vh, 26px);
+}
+
+/* ---------- top bar ---------- */
+.sc-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.sc-brand {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  letter-spacing: -.02em;
+  color: var(--dark);
+  text-decoration: none;
+}
+.sc-brand span { color: var(--teal); }
+
+/* ---------- stage ---------- */
+.sc-stage {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(16px, 3.4vh, 40px);
+}
+
+/* ---------- hero ---------- */
+.sc-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.9rem, 5.6vw, 3.6rem);
+  line-height: 1.04;
+  letter-spacing: -.035em;
+  color: var(--dark);
+  margin: 0 0 clamp(8px, 1.4vh, 16px);
+  max-width: 16ch;
+  text-wrap: balance;
+}
+.sc-tag {
+  margin: 0;
+  font-size: clamp(.85rem, 1.5vw, 1.02rem);
+  color: var(--text-light);
+}
+.sc-arc {
+  margin: clamp(4px, .8vh, 8px) 0 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(.95rem, 1.8vw, 1.2rem);
+  letter-spacing: -.01em;
+  color: var(--teal);
+}
+
+/* ---------- what we do ---------- */
+.sc-do {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(10px, 1.4vw, 18px);
+}
+.sc-do-card {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  padding: clamp(13px, 1.9vh, 22px) clamp(14px, 1.5vw, 20px);
+  transition: border-color var(--ease), transform var(--ease), box-shadow var(--ease);
+}
+.sc-do-card:hover {
+  border-color: var(--teal);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.sc-k {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(.9rem, 1.5vw, 1.06rem);
+  letter-spacing: -.01em;
+  color: var(--dark);
+  margin-bottom: clamp(4px, .7vh, 8px);
+}
+.sc-do-card p {
+  margin: 0;
+  font-size: clamp(.76rem, 1.15vw, .87rem);
+  line-height: 1.5;
+  color: var(--text-light);
+}
+
+/* ---------- how we work / proof ---------- */
+.sc-rows {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(11px, 1.9vh, 22px);
+}
+.sc-row {
+  display: grid;
+  grid-template-columns: minmax(96px, 132px) 1fr;
+  gap: clamp(12px, 2vw, 26px);
+  align-items: baseline;
+  padding-top: clamp(11px, 1.9vh, 20px);
+  border-top: 1px solid var(--border);
+}
+.sc-lbl {
+  font-family: var(--font-playful);
+  font-size: clamp(.95rem, 1.6vw, 1.15rem);
+  font-weight: 700;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  line-height: 1.2;
+}
+.sc-row-body { min-width: 0; }
+.sc-flow {
+  margin: 0 0 clamp(3px, .6vh, 6px);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(.9rem, 1.75vw, 1.16rem);
+  letter-spacing: -.015em;
+  color: var(--dark);
+  line-height: 1.3;
+}
+.sc-flow i { font-style: normal; color: var(--teal); padding: 0 .12em; }
+.sc-fine {
+  margin: 0;
+  font-size: clamp(.75rem, 1.15vw, .86rem);
+  line-height: 1.55;
+  color: var(--text-light);
+  max-width: 68ch;
+}
+
+/* ---------- bottom CTA ---------- */
+.sc-bottom {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(14px, 2.5vw, 28px);
+  flex-wrap: wrap;
+  padding-top: clamp(12px, 2vh, 20px);
+  border-top: 1.5px solid var(--border);
+}
+.sc-ask-q {
+  margin: 0 0 2px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1rem, 2.1vw, 1.45rem);
+  letter-spacing: -.02em;
+  color: var(--dark);
+  line-height: 1.2;
+}
+.sc-actions { display: flex; align-items: center; gap: clamp(10px, 1.6vw, 18px); }
+.sc-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--teal);
+  color: #fff;
+  border-radius: 999px;
+  padding: clamp(9px, 1.4vh, 13px) clamp(17px, 2.2vw, 25px);
+  font-weight: 700;
+  font-size: clamp(.82rem, 1.3vw, .95rem);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background var(--ease), transform var(--ease), box-shadow var(--ease);
+}
+.sc-cta:hover {
+  background: var(--teal-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(13,110,110,.32);
+}
+.sc-cta svg { transition: transform var(--ease); }
+.sc-cta:hover svg { transform: translateX(3px); }
+.sc-alt {
+  font-size: clamp(.78rem, 1.2vw, .88rem);
+  font-weight: 600;
+  color: var(--text-light);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--border);
+  padding-bottom: 1px;
+  white-space: nowrap;
+  transition: color var(--ease), border-color var(--ease);
+}
+.sc-alt:hover { color: var(--teal); border-color: var(--teal); }
+
+/* ---------- legal strip ---------- */
+.sc-legal {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.6vw, 20px);
+  flex-wrap: wrap;
+  font-size: clamp(.68rem, .95vw, .76rem);
+  color: var(--text-lighter);
+}
+.sc-legal a { color: var(--text-lighter); text-decoration: none; transition: color var(--ease); }
+.sc-legal a:hover { color: var(--teal); }
+
+/* ---------- focus ---------- */
+.sc-brand:focus-visible,
+.sc-cta:focus-visible,
+.sc-alt:focus-visible,
+.sc-legal a:focus-visible,
+.dark-toggle:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---------- narrow screens ---------- */
+@media (max-width: 720px) {
+  .sc-do { grid-template-columns: 1fr; gap: 8px; }
+  .sc-do-card { padding: 10px 14px; }
+  .sc-k { margin-bottom: 2px; }
+  .sc-row { grid-template-columns: 1fr; gap: 3px; align-items: start; }
+  .sc-hero h1 { max-width: 100%; }
+  .sc-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .sc-actions { width: 100%; }
+}
+
+/* Safety valve: if the viewport is too short to hold the layout, let it scroll
+   rather than clipping content off the bottom. */
+@media (max-height: 600px) {
+  body.one-screen { overflow: auto; }
+  .screen { height: auto; min-height: 100dvh; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sc-do-card, .sc-cta, .sc-cta svg, .sc-alt { transition: none; }
+  .sc-do-card:hover, .sc-cta:hover { transform: none; }
+}

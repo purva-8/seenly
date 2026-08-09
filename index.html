@@ -10,184 +10,84 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet" />
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <!-- Agent discovery link relations (RFC 8288 §4.2) -->
+  <link rel="stylesheet" href="css/screen.css" />
+  <!-- Agent discovery link relations (RFC 8288 4.2) -->
   <link rel="api-catalog" href="/.well-known/api-catalog" />
   <link rel="alternate" type="text/markdown" href="/index.md" title="Seenly - Markdown for Agents" />
 </head>
-<body>
+<body class="one-screen">
 
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <div class="container nav-inner">
-      <a href="#" class="nav-brand">seen<span>ly</span></a>
-      <div class="nav-links" id="navLinks">
-        <a href="#why">What We Do</a>
-        <a href="#how">How We Work</a>
-        <a href="#proof">Proof</a>
-      </div>
-      <div class="nav-cta">
-        <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
-          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 5.5h16M3 11h16M3 16.5h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  <div class="screen">
+
+    <header class="sc-top">
+      <a href="#" class="sc-brand">seen<span>ly</span></a>
+      <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
-    </div>
-  </nav>
-  <div class="mobile-nav" id="mobileNav">
-    <a href="#why">What We Do</a>
-    <a href="#how">How We Work</a>
-    <a href="#proof">Proof</a>
-    <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/purvahk08/15mins'});return false;" class="btn btn-accent" style="text-align:center;margin-top:8px">Work With Us</a>
-  </div>
+    </header>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="container hero-inner">
-      <div class="hero-content">
+    <main class="sc-stage">
+
+      <section class="sc-hero">
         <h1>We make AI companies impossible to ignore.</h1>
-        <p class="hero-sub">Product &middot; growth &middot; distribution</p>
-        <p class="hero-sub" style="font-weight:700;color:var(--teal);margin-top:-6px">0 &rarr; 1. 1 &rarr; 100.</p>
-        <div class="hero-ctas">
-          <a href="#" onclick="openContactForm();return false;" class="hero-text-cta">Work with us <svg class="hero-text-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
+        <p class="sc-tag">Product &middot; growth &middot; distribution</p>
+        <p class="sc-arc">0 &rarr; 1. &nbsp;1 &rarr; 100.</p>
+      </section>
 
-      </div>
-      <div class="hero-visual">
-        <div class="hero-screen">
-          <div class="screen-bar"><span></span><span></span><span></span></div>
-          <div class="screen-body">
-            <div class="screen-hero-block">
-              <div class="screen-line lg"></div>
-              <div class="screen-line md"></div>
-              <div class="screen-btn-row">
-                <div class="screen-btn accent"></div>
-                <div class="screen-btn outline"></div>
-              </div>
-            </div>
-            <div class="screen-cards">
-              <div class="screen-card"></div>
-              <div class="screen-card"></div>
-              <div class="screen-card"></div>
-            </div>
+      <section class="sc-do" aria-label="What we do">
+        <article class="sc-do-card">
+          <span class="sc-k">Build</span>
+          <p>Product &plus; AI &plus; growth experiments</p>
+        </article>
+        <article class="sc-do-card">
+          <span class="sc-k">Be seen</span>
+          <p>SEO &plus; AEO &plus; AI visibility &plus; technical content</p>
+        </article>
+        <article class="sc-do-card">
+          <span class="sc-k">Create demand</span>
+          <p>Campaigns &plus; founder-led marketing &plus; distribution</p>
+        </article>
+      </section>
+
+      <section class="sc-rows">
+        <div class="sc-row">
+          <span class="sc-lbl">How we work</span>
+          <div class="sc-row-body">
+            <p class="sc-flow">find <i>&rarr;</i> build <i>&rarr;</i> launch <i>&rarr;</i> measure <i>&rarr;</i> repeat</p>
+            <p class="sc-fine">No fixed playbook. We keep a pipeline of bets, double down on what works and kill what doesn&rsquo;t.</p>
           </div>
         </div>
-        <div class="hero-float float-1">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4L6 11.3 2.7 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Seen by AI Models
-        </div>
-        <div class="hero-float float-2">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3 4L6 11.3 2.7 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          0 &rarr; 1 Shipped
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- WHAT WE DO -->
-  <section class="why" id="why">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">What we do</div>
-        <h2>Build it. Get it seen. Make people care.</h2>
-      </div>
-      <div class="why-bento">
-
-        <div class="wb-card wb-dark">
-          <div class="wb-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon class="wb-layer wb-layer-1" points="12 2 2 7 12 12 22 7 12 2"/><polyline class="wb-layer wb-layer-2" points="2 12 12 17 22 12"/><polyline class="wb-layer wb-layer-3" points="2 17 12 22 22 17"/></svg></div>
-          <h3>Build</h3>
-          <p>Product &plus; AI &plus; growth experiments.</p>
-        </div>
-
-        <div class="wb-card wb-teal">
-          <div class="wb-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle class="wb-ring wb-ring-1" cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/></svg></div>
-          <h3>Be seen</h3>
-          <p>SEO &plus; AEO &plus; AI visibility &plus; technical content.</p>
-        </div>
-
-        <div class="wb-card wb-light">
-          <div class="wb-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline class="wb-trend" points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline class="wb-trend-head" points="16 7 22 7 22 13"/></svg></div>
-          <h3>Create demand</h3>
-          <p>Campaigns &plus; founder-led marketing &plus; distribution.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW WE WORK -->
-  <section class="how" id="how">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">How we work</div>
-        <h2>Find &rarr; build &rarr; launch &rarr; measure &rarr; repeat</h2>
-        <p class="section-sub">No fixed playbook. We keep a pipeline of bets, double down on what works and kill what doesn&rsquo;t.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROOF -->
-  <section class="why" id="proof">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">Proof</div>
-        <h2>Work we&rsquo;ve shipped.</h2>
-      </div>
-      <div class="why-bento">
-        <div class="wb-card wb-dark wb-full">
-          <div class="wb-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline class="wb-trend" points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline class="wb-trend-head" points="16 7 22 7 22 13"/></svg></div>
-          <div>
-            <h3>ScaleDown</h3>
-            <p style="font-weight:700;margin-bottom:6px">0 &rarr; 1 DevRel &plus; GTM</p>
-            <p>Content &middot; distribution &middot; community &middot; founder-led growth.</p>
+        <div class="sc-row">
+          <span class="sc-lbl">Proof</span>
+          <div class="sc-row-body">
+            <p class="sc-flow">ScaleDown <i>&middot;</i> 0 &rarr; 1 DevRel &plus; GTM</p>
+            <p class="sc-fine">Content &middot; distribution &middot; community &middot; founder-led growth</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- CTA -->
-  <section class="cta" id="contact">
-    <div class="container">
-      <div class="cta-box">
-        <h2>Got something worth building?</h2>
-        <p style="color:rgba(255,255,255,.7);margin:-8px 0 20px;font-size:1rem">Let&rsquo;s make people care.</p>
-        <div class="cta-btns">
-          <a href="#" onclick="openContactForm();return false;" class="btn cta-cal-btn cta-outline-light">Work with us</a>
-          <span class="cta-or">or</span>
-          <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/purvahk08/15mins'});return false;" class="btn cta-cal-btn cta-outline-light">Book a call</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand-col">
-          <a href="#" class="nav-brand foot-logo">seen<span>ly</span></a>
-          <p>We make AI companies impossible to ignore.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <a href="#why">What We Do</a>
-          <a href="#how">How We Work</a>
-          <a href="#proof">Proof</a>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <a href="mailto:contact@seenly.studio">contact@seenly.studio</a>
-        </div>
+    <footer class="sc-bottom">
+      <div class="sc-ask">
+        <p class="sc-ask-q">Got something worth building?</p>
+        <p class="sc-fine">Let&rsquo;s make people care.</p>
       </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Seenly. All rights reserved.</span>
-        <div class="footer-legal"><a href="#" onclick="openLegal('privacy');return false;">Privacy</a><a href="#" onclick="openLegal('terms');return false;">Terms</a></div>
+      <div class="sc-actions">
+        <a href="#" onclick="openContactForm();return false;" class="sc-cta">Work with us <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="" onclick="Calendly.initPopupWidget({url:'https://calendly.com/purvahk08/15mins'});return false;" class="sc-alt">Book a call</a>
       </div>
+    </footer>
+
+    <div class="sc-legal">
+      <span>&copy; 2026 Seenly</span>
+      <a href="mailto:contact@seenly.studio">contact@seenly.studio</a>
+      <a href="#" onclick="openLegal('privacy');return false;">Privacy</a>
+      <a href="#" onclick="openLegal('terms');return false;">Terms</a>
     </div>
-  </footer>
+
+  </div>
 
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script src="js/main.js"></script>
